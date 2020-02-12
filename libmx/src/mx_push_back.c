@@ -8,7 +8,7 @@ void mx_push_back(t_list **list, void *data) {
         *list = new;
     else {
         last = *list;
-        while(last->next != NULL)
+        while (last->next != NULL)
             last = last->next;
         last->next = new;
     }
