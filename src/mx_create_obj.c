@@ -5,7 +5,7 @@ t_obj *mx_create_obj(char *pathname) {
     struct stat *buf;
 
     stat(pathname, buf);
-    obj->stats = buf;
+    obj->stat = buf;
     obj->content = NULL;
     obj->next = NULL;
     return obj;

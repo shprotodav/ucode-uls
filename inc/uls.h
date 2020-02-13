@@ -38,7 +38,7 @@
 
 typedef struct s_obj {
     char *name; 
-    struct stats *stats;
+    struct stat *stat;
     struct s_obj *content;
     struct s_obj *next;
 } t_obj;
