@@ -1,7 +1,7 @@
 #include "uls.h"
 
-void mx_add_obj(t_obj **list, struct stats *stats) {
-    t_obj *obj = mx_create_obj(stats);
+void mx_add_obj(t_obj **list, char *pathname) {
+    t_obj *obj = mx_create_obj(pathname);
     t_obj *last;
     
     if (*list == NULL)

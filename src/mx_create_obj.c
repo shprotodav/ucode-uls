@@ -1,9 +1,11 @@
 #include "uls.h"
 
-t_obj *mx_create_obj(struct stats *stats) {
+t_obj *mx_create_obj(char *pathname) {
     t_obj *obj = malloc(sizeof(t_obj));
-    
-    obj->stats = stats;
+    struct stat *buf;
+
+    stat(pathname, buf);
+    obj->stats = buf;
     obj->content = NULL;
     obj->next = NULL;
     return obj;
