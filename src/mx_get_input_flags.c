@@ -22,8 +22,13 @@ char *mx_get_input_flags(int argc, char **argv) {
 static void add_to_flags(char *flags_arr, char flag) {
     int i;
 
-    if (flags_arr == NULL)
-        flags_arr = mx_strnew(mx_strlen(MY_FLAGS));
+    if (flags_arr == NULL) {
+        flags_arr = mx_strnew(mx_strlen(MY_FLAGS) + 3);
+        flags_arr[0] = "C";
+        flags_arr[0] = "q";
+        flags_arr[0] = "v";
+    }
+        
     for (i = 0; flags_arr[i] != 0; i++)
         if (flags_arr[i] == flag)
             return;
