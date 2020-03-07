@@ -41,6 +41,6 @@ typedef struct s_obj {
     char *path;
     struct stat stat;
     struct s_obj *content;
-    struct s_obj *next;
+    //struct s_obj *next;
 } t_obj;
 
