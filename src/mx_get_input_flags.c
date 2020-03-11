@@ -11,7 +11,7 @@ char *mx_get_input_flags(int argc, char **argv) {
         if (mx_strcmp(argv[i], "--") == 0)
             break;
         for (int j = 1; argv[i][j]; j++) {
-            if (mx_get_char_index(MY_FLAGS, (argv[i][j])) == -1)
+            if (mx_get_char_index(MX_FLAGS, (argv[i][j])) == -1)
                 error_illegal_option(argv[i][j]);
             add_to_flags(flags, argv[i][j]);
         }
@@ -23,7 +23,7 @@ static void add_to_flags(char *flags_arr, char flag) {
     int i;
 
     if (flags_arr == NULL) {
-        flags_arr = mx_strnew(mx_strlen(MY_FLAGS) + 3);
+        flags_arr = mx_strnew(mx_strlen(MX_FLAGS) + 3);
         flags_arr[0] = "C";
         flags_arr[0] = "q";
         flags_arr[0] = "v";
@@ -39,7 +39,7 @@ static void error_illegal_option(char c) {
     mx_printerr("uls: illegal option -- ");
     mx_printerr(&c);
     mx_printerr("\nusage: ls [-");
-    mx_printerr(MY_FLAGS);
+    mx_printerr(MX_FLAGS);
     mx_printerr("] [file ...]\n");
     exit(1);
 }

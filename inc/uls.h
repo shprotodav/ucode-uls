@@ -19,7 +19,7 @@
 #include <sys/ioctl.h> //ioctl
 #include <sys/xattr.h> //listxattr, getxattr
 
-#define MY_FLAGS "AFRldotu1"
+#define MX_FLAGS "AFRldotu1"
 #define MX_NOCOLOR      "\033[0m"           // nocolor
 #define MX_RED          "\033[0;31m"        //  --x--x--x 3
 #define MX_SOCKET       "\033[0;32m"        //  SOCKET
